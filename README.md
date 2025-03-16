@@ -1,1 +1,1 @@
-https://github.com/ArishaMak/ono-tebe-nado-fd#
+https://github.com/ArishaMak/ono-tebe-nado-fd
