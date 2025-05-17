@@ -5,7 +5,8 @@
 }
 
 .header {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
   padding-bottom: 3px;
   aspect-ratio: 1100 / 293;
@@ -16,9 +17,8 @@
 }
 
 .header-nav {
-  flex: 1;
   display: flex;
-  justify-content: flex-end;
+  justify-content: start;
   padding-left: 50px;
 }
 
@@ -27,11 +27,15 @@
   font-size: 18px;
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  gap: 13px;
+  max-width: 390px;
+  gap: 33px;
 }
 
-.ul-circle {
+.ul-circle li:first-child {
+  list-style-type: none;
+}
+
+.ul-circle li:not(:first-child)  {
   list-style-type: circle;
 }
 
@@ -51,7 +55,6 @@
 }
 
 .address {
-  flex: 1;
   display: flex;
   justify-content: flex-end;
 }
@@ -59,9 +62,8 @@
 .address-menu-list {
   display: flex;
   width: 100%;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  padding-left: 9px;
 }
 
 .address-menu-text {
@@ -146,37 +148,34 @@ a.a:hover {
   letter-spacing: 0.3em;
   text-transform: uppercase;
   flex-direction: column;
-  padding-bottom: 155px;
+  padding-bottom: 106px;
 }
 
-.aligned-text {
-  top: 10px;
-  text-align: start;
+.aligned-text {/*этот класс используется, он выполняет функцию*/
+  top: 10px; 
+  text-align: start; 
+} 
+
+.aligned-text_center {/*без этого еласса тоже никак*/
+  text-align: center; 
+  left: 15px; 
 }
 
-.aligned-text_center {
-  text-align: center;
-  left: 15px;
-}
-
-.aligned-text_right {
-  text-align: end;
-  bottom: 10px;
-  left: 30px;
-}
+.aligned-text_right {/*здесь аналогично*/
+  text-align: end; 
+  bottom: 10px; 
+  left: 30px; 
+} 
 
 .description {
   display: flex;
   width: 100%;
   max-width: 1000px;
-  top: auto;
-  bottom: 50px;
-  left: 50px;
+  margin-bottom: 50px;
+  margin-left: 50px;
   border-width: 1px;
-  display: flex;
   align-items: center;
   justify-content: space-between;
-
 }
 
 .description-p {
@@ -213,12 +212,10 @@ a.a:hover {
 }
 
 .lottt {
-  position: relative;
-  left: 40px;
-  margin: 0;
-  padding: 0;
+  margin-left: 40px; 
   font-size: 40px;
   text-transform: uppercase;
+  padding: 0;
 }
 
 .container {
@@ -231,16 +228,17 @@ a.a:hover {
 }
 
 .container div {
+  display: flex;
   width: 334px;
-  height: 596px;
   position: relative;
+  flex-direction: column;
 }
 
-.card-title{
-  top: 48px;
-  left: 40px;
+.card-title {
+  margin-top: 48px; 
+  margin-left: 40px; 
   width: 254px;
-  margin: 0;
+  margin-bottom: 0;
   font-weight: 700;
   font-size: 22px;
   line-height: 120%;
@@ -252,7 +250,7 @@ a.a:hover {
 .cards {
   display: flex;
   max-width: 334px;
-  max-height: 596px;
+  min-height: 596px;
   margin-bottom: auto;
   flex-direction: column;
   justify-content: space-between;
@@ -286,20 +284,21 @@ a.a:hover {
 }
 
 .text-description {
-  position: relative;
+  margin-top: auto;
   margin-left: 40px;
   margin-right: 40px;
   font-family: Raleway, Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 20px;
   color: white;
-  margin-top: auto;
+  text-decoration: none;
 }
 
 .card-link {
   display: flex;
   flex-direction: column;
   height: 100%;
+  flex: 1; 
   padding-bottom: 48px;
 }
 
@@ -309,9 +308,8 @@ a.a:hover {
   display: grid;
   grid-template-columns: 1fr 2fr;
   max-width: 1052px;
-  left: 24px;
+  margin-left: 24px;
   padding: 0;
-  margin: 0;
 }
 
 .grid-item-logo {
@@ -386,7 +384,7 @@ a.a:hover {
   padding-bottom: 80px;
 }
 
-.footer-menu-list {
+.contact-info {
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -395,12 +393,11 @@ a.a:hover {
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
+  font-style: normal;
 }
 
 .footer-menu-nav {
   display: flex;
-  position: relative;
-  right: 10px;
   text-align: center;
   flex-direction: column;
   max-width: 164px;
@@ -408,7 +405,8 @@ a.a:hover {
   font-family: Raleway, Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 18px;
-  line-height: 21px;
+  line-height: 22px;
+  margin-right: 21px;
 }
 
 .imagens {
