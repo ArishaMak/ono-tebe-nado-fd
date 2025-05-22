@@ -31,6 +31,10 @@
   gap: 33px;
 }
 
+.menu-link-active {
+  text-decoration: none;
+}
+
 .ul-circle li:first-child {
   list-style-type: none;
 }
@@ -80,7 +84,7 @@
   list-style-type: none;
 }
 
-a.a {
+.a {
   color: white;
   text-decoration: none;
   font-family: Raleway, Arial, sans-serif;
@@ -91,7 +95,7 @@ a.a {
   white-space: nowrap;
 }
 
-a.a:hover {
+.a:hover {
   text-decoration: underline;
 }
 
@@ -135,10 +139,10 @@ a.a:hover {
 }
 
 .text-block {
-  position: relative;
   display: flex;
   width: 100%;
-  gap: 50px;
+  justify-content: space-between;
+  gap: 42px;
   padding-left: 50px;
   padding-right: 50px;
   font-family: Raleway, Arial, Helvetica, sans-serif;
@@ -148,24 +152,32 @@ a.a:hover {
   letter-spacing: 0.3em;
   text-transform: uppercase;
   flex-direction: column;
-  padding-bottom: 106px;
+  padding-bottom: 110px;
+  position: relative;
 }
 
-.aligned-text {/*этот класс используется, он выполняет функцию*/
-  top: 10px; 
+.text-block .aligned-text_right {
+  margin-right: -30px;
+  top: -3px;
+}
+
+.aligned-text {
+  padding-top: 10px;
   text-align: start; 
 } 
 
-.aligned-text_center {/*без этого еласса тоже никак*/
-  text-align: center; 
-  left: 15px; 
+.aligned-text_center {
+  text-align: center;
+  padding-left: 30px;
 }
 
-.aligned-text_right {/*здесь аналогично*/
-  text-align: end; 
-  bottom: 10px; 
-  left: 30px; 
-} 
+.aligned-text_right {
+  text-align: end;
+  align-self: flex-end;
+  margin-left: auto;
+  margin-right: 0;
+  padding-right: 0;
+}
 
 .description {
   display: flex;
@@ -272,7 +284,6 @@ a.a:hover {
 }
 
 .p-link {
-  margin-top: auto; 
   font-size: 20px;
   color: black;
   margin-left: 40px;
@@ -294,12 +305,19 @@ a.a:hover {
   text-decoration: none;
 }
 
+.text-description a {
+  text-decoration: none;
+  color: inherit; 
+}
+
 .card-link {
   display: flex;
   flex-direction: column;
   height: 100%;
   flex: 1; 
   padding-bottom: 48px;
+  text-decoration: none;
+  color: inherit;
 }
 
 .content-section_about {
